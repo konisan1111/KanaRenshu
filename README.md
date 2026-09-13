@@ -1,4 +1,4 @@
-![logo](https://i.ibb.co/SP7yKFb/kanarenshu-logo.jpg)
+<img width="546" height="102" alt="kanarenshu" src="https://github.com/user-attachments/assets/866defe1-75f0-446c-a9c5-44e00fb98522" />
 
 # Kana Renshū（。＾▽＾）🌸
 Welcome to the repository of Kana Renshū!
