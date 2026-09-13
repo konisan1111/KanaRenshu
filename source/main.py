@@ -26,6 +26,8 @@ class KanaRenshu(customtkinter.CTk):
         self.title("Kana Renshū - The Japanese Learning Program")
         self.geometry(f"{self.width}x{self.height}")
         self.resizable(False, False)
+        current_path = os.path.dirname(os.path.realpath(__file__))
+        self.iconbitmap(current_path + "\\icon.ico")
 
         #Only for console testers, clearing the Console.
         #It's better to have a clean screen after answearing.
@@ -40,11 +42,11 @@ class KanaRenshu(customtkinter.CTk):
                                                size=(self.width, self.height))
         self.bg_image_label = customtkinter.CTkLabel(self, image=self.bg_image)
         self.bg_image_label.grid(row=0, column=0)
-        self.text_label = customtkinter.CTkButton(self, font=("Arial", 55, 'bold'), text_color='#938CD9', bg_color="#938CD9", text=selectedChar, width=370, height=50, fg_color=("#4B4648", "#4B4648"), corner_radius=(30))
+        self.text_label = customtkinter.CTkButton(self, font=("Arial", 55, 'bold'), text_color="#8F86F3", bg_color="#171717", text=selectedChar, width=370, height=50, fg_color=("#171717", "#171717"), corner_radius=(0), hover_color="#171717",)
         self.text_label.grid(row=0, column=0, padx=30, pady=(0, 45))
-        self.check_button = customtkinter.CTkButton(self, font=("Arial", 10, 'bold'), text_color='#938CD9', bg_color="#938CD9", text="Check ✔", width=370, height=10, fg_color=("#4B4648", "#4B4648"), command=self.checkUserInput, corner_radius=(50))
+        self.check_button = customtkinter.CTkButton(self, font=("Arial", 10, 'bold'), text_color='#8F86F3', bg_color="#171717", text="Check ✔", width=370, height=10, fg_color=("#171717", "#171717"), command=self.checkUserInput, corner_radius=(0), hover_color="#171717",)
         self.check_button.grid(row=0, column=0, padx=30, pady=(46, 0))
-        self.username_entry = customtkinter.CTkEntry(self, justify='center', text_color='#938CD9', bg_color="#938CD9", font=("Arial", 13, 'bold'), fg_color=("#4B4648", "#4B4648"),  width=370, height=29, placeholder_text="Type the character in romaji: ", corner_radius=(30))
+        self.username_entry = customtkinter.CTkEntry(self, justify='center', text_color='#8F86F3', bg_color="#171717", font=("Arial", 13, 'bold'), fg_color=("#171717", "#171717"),  width=370, height=29, placeholder_text="Type the character in romaji: ", corner_radius=(0))
         self.username_entry.grid(row=0, column=0, padx=30, pady=(98, 1))
     
     #Checking the answer.
@@ -56,18 +58,18 @@ class KanaRenshu(customtkinter.CTk):
         if self.translatedChar == userInput.lower():
             
             print(f'{consoleDebug}Correct!')
-            self.text_label = customtkinter.CTkButton(self, font=("Arial", 56, 'bold'), text_color='#938CD9', text="✔", width=370, height=50, fg_color=("#4B4648", "#4B4648"))
+            self.text_label = customtkinter.CTkButton(self, font=("Arial", 56, 'bold'), text_color='#8F86F3', text="✔", width=370, height=50, fg_color=("#171717", "#171717"), hover_color="#171717",)
             
             os.system('cls')
             selectedChar = random.choice(hiragana_chart)
             result = charFormat.convert(selectedChar)[0]
 
             self.translatedChar = format(result['hepburn'])
-            self.text_label = customtkinter.CTkButton(self, font=("Arial", 55, 'bold'), text_color='#938CD9', bg_color="#938CD9", text=selectedChar, width=370, height=50, fg_color=("#4B4648", "#4B4648"), corner_radius=(30))
+            self.text_label = customtkinter.CTkButton(self, font=("Arial", 55, 'bold'), text_color='#8F86F3', bg_color="#171717", text=selectedChar, width=370, height=50, fg_color=("#171717", "#171717"), corner_radius=(0), hover_color="#171717",)
             self.text_label.grid(row=0, column=0, padx=30, pady=(0, 45))
-            self.check_button = customtkinter.CTkButton(self, font=("Arial", 10, 'bold'), text_color='#938CD9', bg_color="#938CD9", text="Check ✔", width=370, height=10, fg_color=("#4B4648", "#4B4648"), command=self.checkUserInput, corner_radius=(50))
+            self.check_button = customtkinter.CTkButton(self, font=("Arial", 10, 'bold'), text_color='#8F86F3', bg_color="#171717", text="Check ✔", width=370, height=10, fg_color=("#171717", "#171717"), command=self.checkUserInput, corner_radius=(0), hover_color="#171717",)
             self.check_button.grid(row=0, column=0, padx=30, pady=(46, 0))
-            self.username_entry = customtkinter.CTkEntry(self, justify='center', text_color='#938CD9', bg_color="#938CD9", font=("Arial", 13, 'bold'), fg_color=("#4B4648", "#4B4648"),  width=370, height=29, placeholder_text="Type the character in romaji: ", corner_radius=(30))
+            self.username_entry = customtkinter.CTkEntry(self, justify='center', text_color='#8F86F3', bg_color="#171717", font=("Arial", 13, 'bold'), fg_color=("#171717", "#171717"),  width=370, height=29, placeholder_text="Type the character in romaji: ", corner_radius=(0))
             self.username_entry.grid(row=0, column=0, padx=30, pady=(98, 1))
         
         else:
@@ -78,14 +80,13 @@ class KanaRenshu(customtkinter.CTk):
             self.translatedChar = format(result['hepburn'])
             
             print(f'{consoleDebug}Wrong!')
-            self.text_label = customtkinter.CTkButton(self, font=("Arial", 55, 'bold'), text_color='#938CD9', bg_color="#938CD9", text=selectedChar, width=370, height=50, fg_color=("#765793", "#765793"), corner_radius=(30))
+            self.text_label = customtkinter.CTkButton(self, font=("Arial", 55, 'bold'), text_color='#E64B50', bg_color="#171717", text=selectedChar, width=370, height=50, fg_color=("#171717", "#171717"), corner_radius=(0), hover_color="#171717",)
             self.text_label.grid(row=0, column=0, padx=30, pady=(0, 45))
-            self.check_button = customtkinter.CTkButton(self, font=("Arial", 10, 'bold'), text_color='#938CD9', bg_color="#938CD9", text="Check ✔", width=370, height=10, fg_color=("#765793", "#765793"), command=self.checkUserInput, corner_radius=(50))
+            self.check_button = customtkinter.CTkButton(self, font=("Arial", 10, 'bold'), text_color='#E64B50', bg_color="#171717", text="Check ✔", width=370, height=10, fg_color=("#171717", "#171717"), command=self.checkUserInput, corner_radius=(0), hover_color="#171717",)
             self.check_button.grid(row=0, column=0, padx=30, pady=(46, 0))
-            self.username_entry = customtkinter.CTkEntry(self, justify='center', text_color='#938CD9', bg_color="#938CD9", font=("Arial", 13, 'bold'), fg_color=("#4B4648", "#4B4648"),  width=370, height=29, placeholder_text="Wrong romaji!", corner_radius=(30))
+            self.username_entry = customtkinter.CTkEntry(self, justify='center', text_color="#E64B50", bg_color="#171717", font=("Arial", 13, 'bold'), fg_color=("#171717", "#171717"),  width=370, height=29, placeholder_text="Wrong romaji!", corner_radius=(0))
             self.username_entry.grid(row=0, column=0, padx=30, pady=(98, 1))
 
 if __name__ == "__main__":
-    
     app = KanaRenshu()
     app.mainloop()
