@@ -1,10 +1,15 @@
 ![logo](https://i.ibb.co/SP7yKFb/kanarenshu-logo.jpg)
+
 # Kana Renshū（。＾▽＾）🌸
 Welcome to the repository of Kana Renshū!
+
 ### What is Kana Renshū? 
 - Kana Renshū is a Japanase Kana (Hiragana) trainer program, you can practice your skills in Japanese characters!
 - Dakuten, and Handakuten characters are supported!
 - *Katakana newly installed.*
+
+<img width="418" height="153" alt="Képernyőkép 2026-09-13 113538" src="https://github.com/user-attachments/assets/f7d4cb98-88f6-4d6e-8e55-59e62f65db56" />
+<img width="417" height="154" alt="Képernyőkép 2026-09-13 113528" src="https://github.com/user-attachments/assets/e6c23125-9901-4b8d-bdb4-be54645913b4" />
 
 **Hiragana Characters:** 
 > hiragana_chart = "あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖゝゞ"
