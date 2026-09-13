@@ -38,7 +38,7 @@ It's simple, and I made mistakes in the UI, so please forgive me...
     
 ```
 
-> This project created in 2 days in a University, so it's not a big deal, so use it as you please.
+> This project has been made in 2 days at a University, so it's not a big deal, use it as you please.
 
 # If you want to build the code with PyInstaller module: 🏡
 The code can be build on Windows and Linux too, but you need to use the --add-data subcommand for customtkinter .json.
